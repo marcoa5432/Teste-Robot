@@ -1,0 +1,1791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.11.0 on win32)" generated="2025-06-21T23:59:09.529502" rpa="false" schemaversion="5">
+<suite id="s1" name="Google Teste" source="c:\Users\marco\OneDrive\Área de Trabalho\Atividades\Teste-Robot\google_teste.robot">
+<test id="s1-t1" name="Caso de teste 01 - Verificar elemento visivel" line="8">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-21T23:59:10.007668" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:10.033567" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\3d2ee190-c8a4-49a8-b3e7-a7531308bd9a"}</msg>
+<msg time="2025-06-21T23:59:10.083062" level="INFO">Starting Browser process C:\Users\marco\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:60842</msg>
+<msg time="2025-06-21T23:59:12.685840" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\3d2ee190-c8a4-49a8-b3e7-a7531308bd9a"}</msg>
+<msg time="2025-06-21T23:59:12.699845" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-21T23:59:12.800526" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-21T23:59:12.815789" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-21T23:59:15.751495" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-21T23:59:10.007668" elapsed="5.744825"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-21T23:59:15.787230" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-21T23:59:15.752493" elapsed="0.037733"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:10.007668" elapsed="5.782558"/>
+</kw>
+<kw name="Acessar a pagina de teste" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:15.811558" level="INFO">Clicks the element '//a[@href="/abtest"]'.</msg>
+<arg>//a[@href="/abtest"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:15.811558" elapsed="0.422297"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:16.233855" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:16.502895" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:16.233855" elapsed="0.270039"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-21T23:59:16.550833" level="INFO">Waited for Element with selector //div[@class="example"]//h3 at state visible</msg>
+<arg>//div[@class="example"]//h3</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-21T23:59:16.503894" elapsed="0.046939"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:15.811558" elapsed="0.740274"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:16.554827" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:16.763958" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:16.554827" elapsed="0.210129"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-21T23:59:17.900873" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-21T23:59:16.764956" elapsed="1.135917"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:16.552829" elapsed="1.348044"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:10.007668" elapsed="7.908835"/>
+</test>
+<test id="s1-t2" name="Caso de teste 02 - Add/Remove Elements" line="11">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-21T23:59:17.952678" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:17.959323" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\1b272de8-4c8c-4dcb-a391-a58e97d56cc4"}</msg>
+<msg time="2025-06-21T23:59:18.486082" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\1b272de8-4c8c-4dcb-a391-a58e97d56cc4"}</msg>
+<msg time="2025-06-21T23:59:18.504306" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-21T23:59:18.558116" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-21T23:59:18.558116" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-21T23:59:21.447797" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-21T23:59:17.950092" elapsed="3.497705"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-21T23:59:21.483318" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-21T23:59:21.447797" elapsed="0.035521"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:17.949093" elapsed="3.534225"/>
+</kw>
+<kw name="Adicionar e remover elemento" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:21.496459" level="INFO">Clicks the element '(//li)[2]//a'.</msg>
+<arg>(//li)[2]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:21.496459" elapsed="0.379648"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:21.878105" level="INFO">Clicks the element '//button[@onclick="addElement()"]'.</msg>
+<arg>//button[@onclick="addElement()"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:21.876107" elapsed="0.153278"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:22.029385" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:22.260465" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:22.029385" elapsed="0.231080"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:22.260465" level="INFO">Clicks the element '//button[@class="added-manually"]'.</msg>
+<arg>//button[@class="added-manually"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:22.260465" elapsed="0.056587"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:21.496459" elapsed="0.820593"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:22.327809" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:22.529823" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-4.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-4.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:22.327809" elapsed="0.202014"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-21T23:59:23.397599" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-21T23:59:22.529823" elapsed="0.867776"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:22.327809" elapsed="1.085415"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:17.935056" elapsed="5.478168"/>
+</test>
+<test id="s1-t3" name="Caso de teste 03 - Confirmar imagem na pagina" line="14">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-21T23:59:23.438267" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:23.451757" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\1759a56c-bb19-4fc5-b78b-2f71d9254995"}</msg>
+<msg time="2025-06-21T23:59:23.952996" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\1759a56c-bb19-4fc5-b78b-2f71d9254995"}</msg>
+<msg time="2025-06-21T23:59:23.968626" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-21T23:59:24.019258" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-21T23:59:24.019258" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-21T23:59:26.873852" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-21T23:59:23.438267" elapsed="3.436587"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-21T23:59:26.901959" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-21T23:59:26.875853" elapsed="0.027106"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:23.438267" elapsed="3.465690"/>
+</kw>
+<kw name="Confirmar imagens na pagina" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:26.918510" level="INFO">Clicks the element '(//li)[4]//a'.</msg>
+<arg>(//li)[4]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:26.915948" elapsed="0.328317"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-21T23:59:27.329829" level="INFO">Waited for Element with selector //img[@src="asdf.jpg"] at state visible</msg>
+<arg>//img[@src="asdf.jpg"]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-21T23:59:27.244265" elapsed="0.085564"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:27.329829" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:27.662597" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-5.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-5.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:27.329829" elapsed="0.333768"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-21T23:59:27.678208" level="INFO">Waited for Element with selector //img[@src="hjkl.jpg"] at state visible</msg>
+<arg>//img[@src="hjkl.jpg"]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-21T23:59:27.663597" elapsed="0.015609"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:27.679206" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:27.887537" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-6.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-6.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:27.679206" elapsed="0.208331"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-21T23:59:27.903327" level="INFO">Waited for Element with selector //img[@src="img/avatar-blank.jpg"] at state visible</msg>
+<arg>//img[@src="img/avatar-blank.jpg"]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-21T23:59:27.888535" elapsed="0.015791"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:27.905329" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:28.091305" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-7.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-7.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:27.905329" elapsed="0.185976"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:26.913948" elapsed="1.178355"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:28.095299" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:28.296523" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-8.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-8.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:28.095299" elapsed="0.201224"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-21T23:59:29.154934" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-21T23:59:28.297520" elapsed="0.857414"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:28.093305" elapsed="1.061629"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:23.437677" elapsed="5.717257"/>
+</test>
+<test id="s1-t4" name="Caso de teste 04 - Checar o botão checkbox" line="17">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-21T23:59:29.195044" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:29.195044" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\830ff5d9-91d1-427c-aaaa-85d9f7ff6556"}</msg>
+<msg time="2025-06-21T23:59:29.648376" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\830ff5d9-91d1-427c-aaaa-85d9f7ff6556"}</msg>
+<msg time="2025-06-21T23:59:29.664007" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-21T23:59:29.715129" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-21T23:59:29.715129" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-21T23:59:32.492206" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-21T23:59:29.195044" elapsed="3.297162"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-21T23:59:32.520119" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-21T23:59:32.492206" elapsed="0.027913"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:29.195044" elapsed="3.326074"/>
+</kw>
+<kw name="Confirmar checkbox disponivel" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:32.534105" level="INFO">Clicks the element '(//li)[6]//a'.</msg>
+<arg>(//li)[6]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:32.533106" elapsed="0.404659"/>
+</kw>
+<kw name="Check Checkbox" owner="Browser">
+<arg>(//input[@type="checkbox"])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:32.938765" elapsed="0.121754"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:38.061069" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:33.060519" elapsed="5.000550"/>
+</kw>
+<kw name="Click With Options" owner="Browser">
+<msg time="2025-06-21T23:59:38.061069" level="INFO">Clicks the element '(//input[@type="checkbox"])[2]'.</msg>
+<arg>(//input[@type="checkbox"])[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:38.061069" elapsed="0.061209"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:38.123274" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:38.326598" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-9.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-9.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:38.123274" elapsed="0.204325"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:43.329201" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:38.327599" elapsed="5.001602"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:32.531108" elapsed="10.798093"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-21T23:59:43.329201" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:43.549520" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-10.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-10.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-21T23:59:43.329201" elapsed="0.220319"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-21T23:59:44.365895" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-21T23:59:43.550519" elapsed="0.815376"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:43.329201" elapsed="1.036694"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:29.187033" elapsed="15.186889"/>
+</test>
+<test id="s1-t5" name="Caso de teste 05 - Confirmar imagem quando estiver visivel" line="20">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-21T23:59:44.416055" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:44.418318" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\8cb96538-db70-4ca0-b190-2f1692e94398"}</msg>
+<msg time="2025-06-21T23:59:45.065320" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\8cb96538-db70-4ca0-b190-2f1692e94398"}</msg>
+<msg time="2025-06-21T23:59:45.065320" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-21T23:59:45.164735" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-21T23:59:45.164735" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-21T23:59:47.809053" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-21T23:59:44.413383" elapsed="3.395670"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-21T23:59:47.841644" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-21T23:59:47.809053" elapsed="0.034063"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:44.410720" elapsed="3.432396"/>
+</kw>
+<kw name="Confirmar imagem quando visivel" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:47.849118" level="INFO">Clicks the element '(//li)[12]//a'.</msg>
+<arg>(//li)[12]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:47.847120" elapsed="0.355970"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-21T23:59:48.205256" level="INFO">${tentativa} = 1</msg>
+<var>${tentativa}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-21T23:59:48.204254" elapsed="0.002000"/>
+</kw>
+<while condition="${tentativa} &lt;= ${MAX_TENTATIVAS}">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:48.210251" level="INFO">Tentativa 1</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:48.209251" elapsed="0.001000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:48.218242" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:48.217242" elapsed="0.002001">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:48.220531" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:48.211250" elapsed="0.010282"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:48.222531" elapsed="0.000998"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:48.226526" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:48.224529" elapsed="0.310844"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:49.537926" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:48.536372" elapsed="1.001554"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:49.537926" level="INFO">${tentativa} = 2</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:49.537926" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:48.206254" elapsed="1.331672"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:49.537926" level="INFO">Tentativa 2</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:49.537926" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:49.562844" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:49.556540" elapsed="0.007304">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:49.564842" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:49.537926" elapsed="0.027916"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:49.566840" elapsed="0.001999"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:49.572835" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:49.569838" elapsed="0.276969"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:50.848624" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:49.847197" elapsed="1.001427"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:50.848624" level="INFO">${tentativa} = 3</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:50.848624" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:49.537926" elapsed="1.310698"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:50.848624" level="INFO">Tentativa 3</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:50.848624" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:50.870604" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:50.864265" elapsed="0.007336">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:50.872604" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:50.848624" elapsed="0.024983"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:50.875251" elapsed="0.003204"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:50.883450" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:50.879455" elapsed="0.298737"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:52.179529" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:51.178192" elapsed="1.001337"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:52.179529" level="INFO">${tentativa} = 4</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:52.179529" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:50.848624" elapsed="1.330905"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:52.179529" level="INFO">Tentativa 4</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:52.179529" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:52.201780" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:52.200780" elapsed="0.001995">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:52.203779" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:52.179529" elapsed="0.024250"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:52.204831" elapsed="0.001211"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:52.210043" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:52.207046" elapsed="0.287850"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:53.496278" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:52.494896" elapsed="1.001382"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:53.496278" level="INFO">${tentativa} = 5</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:53.496278" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:52.179529" elapsed="1.316749"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:53.496278" level="INFO">Tentativa 5</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:53.496278" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:53.523387" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:53.521388" elapsed="0.003000">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:53.525386" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:53.496278" elapsed="0.030107"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:53.527385" elapsed="0.001998"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:53.534587" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:53.530677" elapsed="0.288073"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:54.821003" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:53.818750" elapsed="1.002253"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:54.821003" level="INFO">${tentativa} = 6</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:54.821003" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:53.496278" elapsed="1.324725"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:54.821003" level="INFO">Tentativa 6</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:54.821003" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:54.838869" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:54.838869" elapsed="0.007024">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:54.847891" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:54.821003" elapsed="0.026888"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:54.849890" elapsed="0.002996"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:54.856881" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:54.853885" elapsed="0.282336"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:56.137682" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:55.136221" elapsed="1.001461"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:56.137682" level="INFO">${tentativa} = 7</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:56.137682" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:54.821003" elapsed="1.316679"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:56.137682" level="INFO">Tentativa 7</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:56.137682" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:56.160874" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:56.159876" elapsed="0.001998">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:56.162873" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:56.137682" elapsed="0.025191"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:56.164874" elapsed="0.001000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:56.170226" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:56.167868" elapsed="0.294832"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:57.465021" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:56.463700" elapsed="1.001321"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:57.465021" level="INFO">${tentativa} = 8</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:57.465021" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:56.137682" elapsed="1.327339"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:57.465021" level="INFO">Tentativa 8</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:57.465021" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:57.487171" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:57.486175" elapsed="0.000996">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:57.488172" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:57.465021" elapsed="0.024146"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:57.490170" elapsed="0.002000"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:57.495160" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:57.493169" elapsed="0.270232"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-21T23:59:58.766074" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:57.764401" elapsed="1.001673"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-21T23:59:58.766074" level="INFO">${tentativa} = 9</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-21T23:59:58.766074" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:57.465021" elapsed="1.301053"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-21T23:59:58.766074" level="INFO">Tentativa 9</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-21T23:59:58.766074" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-21T23:59:58.790349" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-21T23:59:58.789350" elapsed="0.000999">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-21T23:59:58.791349" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-21T23:59:58.766074" elapsed="0.026274"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-21T23:59:58.793345" elapsed="0.001995"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-21T23:59:58.799689" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-21T23:59:58.796687" elapsed="0.323427"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T00:00:00.122605" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-21T23:59:59.121112" elapsed="1.001493"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-22T00:00:00.122605" level="INFO">${tentativa} = 10</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-22T00:00:00.122605" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:58.766074" elapsed="1.356531"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-22T00:00:00.122605" level="INFO">Tentativa 10</msg>
+<arg>Tentativa ${tentativa}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-22T00:00:00.122605" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="//img[@src=&quot;/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg&quot;]">
+<msg time="2025-06-22T00:00:00.138123" level="FAIL">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</msg>
+<status status="FAIL" start="2025-06-22T00:00:00.138123" elapsed="0.000000">No keyword with name '//img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]' found.</status>
+</kw>
+<msg time="2025-06-22T00:00:00.145136" level="INFO">${encontrou} = False</msg>
+<var>${encontrou}</var>
+<arg>${IMAGEM_DESEJADA}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-06-22T00:00:00.122605" elapsed="0.023530"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${encontrou}</arg>
+<arg>Exit For Loop</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-06-22T00:00:00.146135" elapsed="0.000999"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:00.150131" level="INFO">Clicks the element '//a[text()="click here"]'.</msg>
+<arg>${BOTAO_ATUALIZAR}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:00.148134" elapsed="0.276934"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T00:00:01.427321" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T00:00:00.426070" elapsed="1.001251"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-22T00:00:01.427321" level="INFO">${tentativa} = 11</msg>
+<var>${tentativa}</var>
+<arg>${tentativa} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-22T00:00:01.427321" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:00.122605" elapsed="1.304716"/>
+</iter>
+<status status="PASS" start="2025-06-21T23:59:48.206254" elapsed="13.221067"/>
+</while>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-22T00:00:01.427321" level="INFO">Imagem encontrada! Teste finalizado com sucesso</msg>
+<arg>Imagem encontrada! Teste finalizado com sucesso</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-22T00:00:01.427321" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:47.845121" elapsed="13.582200"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:01.440263" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:01.671902" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-11.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-11.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:01.440263" elapsed="0.231639"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:02.707977" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:01.672904" elapsed="1.035073"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:01.438261" elapsed="1.269716"/>
+</kw>
+<status status="PASS" start="2025-06-21T23:59:44.393686" elapsed="18.314291"/>
+</test>
+<test id="s1-t6" name="Caso de teste 06 - Checar e adicionar e preencher e confirmar" line="23">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:02.759052" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:02.780487" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\5653a4f9-aa5a-4bb2-9d7b-f275c461cc18"}</msg>
+<msg time="2025-06-22T00:00:03.553638" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\5653a4f9-aa5a-4bb2-9d7b-f275c461cc18"}</msg>
+<msg time="2025-06-22T00:00:03.553638" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:03.602906" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:03.602906" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:06.258310" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:02.757713" elapsed="3.500597"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:06.293541" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:06.258310" elapsed="0.036233"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:02.756713" elapsed="3.537830"/>
+</kw>
+<kw name="Adicionar o checkbox e adicionar na label" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:06.316186" level="INFO">Clicks the element '(//li)[13]//a'.</msg>
+<arg>(//li)[13]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:06.313187" elapsed="0.315708"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:06.631891" level="INFO">Clicks the element '//input[@label="blah"]'.</msg>
+<arg>//input[@label="blah"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:06.629893" elapsed="0.443968"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:07.073861" level="INFO">Clicks the element '//input[@label="blah"]/../..//button'.</msg>
+<arg>//input[@label="blah"]/../..//button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:07.073861" elapsed="0.057172"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-22T00:00:10.560024" level="INFO">Waited for Element with selector //p[text()="It's gone!"] at state visible</msg>
+<arg>//p[text()="It's gone!"]</arg>
+<arg>visible</arg>
+<arg>timeout= 5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-22T00:00:07.132033" elapsed="3.427991"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:10.560024" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:10.803931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-12.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-12.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:10.560024" elapsed="0.244906"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:10.806929" level="INFO">Clicks the element '//input[@type="text"]/..//button'.</msg>
+<arg>//input[@type="text"]/..//button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:10.804930" elapsed="0.055401"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-22T00:00:14.303163" level="INFO">Waited for Element with selector //p[text()="It's enabled!"] at state visible</msg>
+<arg>//p[text()="It's enabled!"]</arg>
+<arg>visible</arg>
+<arg>timeout= 5s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-22T00:00:10.861328" elapsed="3.442836"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-06-22T00:00:14.306160" level="INFO">Fills the text 'ROBOTIZANDO WORLD' in the given field.</msg>
+<arg>//input[@type="text"]</arg>
+<arg>ROBOTIZANDO WORLD</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:14.304164" elapsed="0.032675"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T00:00:19.340475" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T00:00:14.337838" elapsed="5.002637"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:19.340475" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:19.539397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-13.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-13.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:19.340475" elapsed="0.198922"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:06.312188" elapsed="13.227209"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:19.539397" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:19.743623" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-14.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-14.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:19.539397" elapsed="0.204226"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:20.621598" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:19.743623" elapsed="0.886002"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:19.539397" elapsed="1.091247"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:02.748720" elapsed="17.882443"/>
+</test>
+<test id="s1-t7" name="Caso de teste 07 - Esperar palavra oculta após login" line="26">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:20.654520" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:20.662013" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\c914f33f-ccc9-4d8a-b656-d130a0fb4305"}</msg>
+<msg time="2025-06-22T00:00:21.374855" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\c914f33f-ccc9-4d8a-b656-d130a0fb4305"}</msg>
+<msg time="2025-06-22T00:00:21.397723" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:21.523609" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:21.523609" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:24.288040" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:20.652524" elapsed="3.635516"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:24.320614" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:24.289926" elapsed="0.031691"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:20.651523" elapsed="3.671089"/>
+</kw>
+<kw name="Testar Ambientes Com Links Diferentes" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:24.328608" level="INFO">Clicks the element '(//li)[14]//a'.</msg>
+<arg>(//li)[14]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:24.326609" elapsed="0.374067"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:24.703674" level="INFO">Clicks the element '//a[@href="/dynamic_loading/1"]'.</msg>
+<arg>//a[@href="/dynamic_loading/1"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:24.701676" elapsed="0.299178"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:25.002852" level="INFO">Clicks the element '//div[@id="start"]//button'.</msg>
+<arg>//div[@id="start"]//button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:25.001853" elapsed="0.119255"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:24.324611" elapsed="0.796497"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:25.121108" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:25.348240" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-15.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-15.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:25.121108" elapsed="0.227904"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:26.169926" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:25.349012" elapsed="0.820914"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:25.121108" elapsed="1.064442"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:20.631163" elapsed="5.554387"/>
+</test>
+<test id="s1-t8" name="Caso de teste 08 - Esperar palavra oculta após login 2" line="28">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:26.219747" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:26.225378" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\dc8d4697-7085-4865-bc53-e98301040bff"}</msg>
+<msg time="2025-06-22T00:00:26.944864" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\dc8d4697-7085-4865-bc53-e98301040bff"}</msg>
+<msg time="2025-06-22T00:00:26.960489" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:26.994081" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:26.995079" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:29.963431" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:26.219747" elapsed="3.743684"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:29.990989" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:29.965375" elapsed="0.025614"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:26.219747" elapsed="3.773644"/>
+</kw>
+<kw name="Testar Ambientes Com Links Diferentes 2" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:30.010057" level="INFO">Clicks the element '(//li)[14]//a'.</msg>
+<arg>(//li)[14]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:30.008275" elapsed="0.365791"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:30.377063" level="INFO">Clicks the element '//a[@href="/dynamic_loading/2"]'.</msg>
+<arg>//a[@href="/dynamic_loading/2"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:30.375065" elapsed="0.277953"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:30.655017" level="INFO">Clicks the element '//div[@id="start"]//button'.</msg>
+<arg>//div[@id="start"]//button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:30.654018" elapsed="0.099347"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:30.004882" elapsed="0.748483"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:30.768991" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:31.001208" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-16.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-16.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:30.768991" elapsed="0.233216"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:31.776212" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:31.003207" elapsed="0.773005"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:30.753365" elapsed="1.022847"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:26.211070" elapsed="5.565142"/>
+</test>
+<test id="s1-t9" name="Caso de teste 09 - Fechar mensagem da Modal" line="30">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:31.827769" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:31.827769" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\b1fed1ac-f765-4a52-adcc-45dea4e52296"}</msg>
+<msg time="2025-06-22T00:00:32.407468" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\b1fed1ac-f765-4a52-adcc-45dea4e52296"}</msg>
+<msg time="2025-06-22T00:00:32.407468" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:32.438718" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:32.438718" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:35.641017" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:31.827769" elapsed="3.814246"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:35.666163" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:35.642015" elapsed="0.024200"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:31.827769" elapsed="3.840515"/>
+</kw>
+<kw name="Fechar modal na tela" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:35.680802" level="INFO">Clicks the element '(//li)[15]//a'.</msg>
+<arg>(//li)[15]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:35.677803" elapsed="0.319596"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T00:00:37.999571" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T00:00:35.998401" elapsed="2.001170"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:37.999571" level="INFO">Clicks the element '//p[text()="Close"]'.</msg>
+<arg>//p[text()="Close"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:37.999571" elapsed="0.091528"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:35.676802" elapsed="2.414297"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:38.094096" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:38.292128" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-17.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-17.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:38.094096" elapsed="0.199030"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:39.108295" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:38.293126" elapsed="0.815169"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:38.092099" elapsed="1.016196"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:31.818020" elapsed="7.290275"/>
+</test>
+<test id="s1-t10" name="Caso de teste 10 - testa autenticação" line="32">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:39.141014" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:39.143010" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\098a1b1a-40fe-4dd0-a56b-30da71e53ef1"}</msg>
+<msg time="2025-06-22T00:00:39.663823" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\098a1b1a-40fe-4dd0-a56b-30da71e53ef1"}</msg>
+<msg time="2025-06-22T00:00:39.663823" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:39.723408" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:39.724408" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:42.466032" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:39.139014" elapsed="3.327510"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:42.491133" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:42.466524" elapsed="0.025612"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:39.135112" elapsed="3.357024"/>
+</kw>
+<kw name="Teste de formulario de autenticação" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:42.507122" level="INFO">Clicks the element '(//li)[21]//a'.</msg>
+<arg>(//li)[21]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:42.505123" elapsed="0.322623"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-06-22T00:00:42.830684" level="INFO">Fills the text 'João do pe de feijão' in the given field.</msg>
+<arg>//input[@name="username"]</arg>
+<arg>João do pe de feijão</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:42.828683" elapsed="0.138618"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-06-22T00:00:42.967301" level="INFO">Fills the text '12345678' in the given field.</msg>
+<arg>//input[@name="password"]</arg>
+<arg>12345678</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:42.967301" elapsed="0.031249"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:42.998550" level="INFO">Clicks the element '//button[@class="radius"]'.</msg>
+<arg>//button[@class="radius"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:42.998550" elapsed="0.569234"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-22T00:00:43.639135" level="INFO">Waited for Element with selector //div[@id="flash"] at state visible</msg>
+<arg>//div[@id="flash"]</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-22T00:00:43.568788" elapsed="0.070347"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T00:00:46.653216" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T00:00:43.651649" elapsed="3.001567"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:42.503121" elapsed="4.150095"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:46.653216" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:46.865187" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-18.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-18.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:46.653216" elapsed="0.212969"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:48.509746" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:46.866185" elapsed="1.643561"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:46.653216" elapsed="1.856530"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:39.129556" elapsed="9.395820"/>
+</test>
+<test id="s1-t11" name="Caso de teste 11 - teste de perfil" line="34">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:48.549899" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:48.553476" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\18e49a8c-5719-453a-aa14-053f4f744958"}</msg>
+<msg time="2025-06-22T00:00:48.954640" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\18e49a8c-5719-453a-aa14-053f4f744958"}</msg>
+<msg time="2025-06-22T00:00:48.958637" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:48.998381" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:48.998381" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:51.981579" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:48.548665" elapsed="3.432914"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:52.011216" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:51.981579" elapsed="0.030638"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:48.546626" elapsed="3.465591"/>
+</kw>
+<kw name="Teste de perfil" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:52.023205" level="INFO">Clicks the element '(//li)[25]//a'.</msg>
+<arg>(//li)[25]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:52.019208" elapsed="0.306169"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:52.328374" level="INFO">Clicks the element '(//img[@src="/img/avatar-blank.jpg"])[1]'.</msg>
+<arg>(//img[@src="/img/avatar-blank.jpg"])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:52.326375" elapsed="0.199725"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:52.526100" level="INFO">Clicks the element '(//div[@class="figcaption"]//h5)[1]'.</msg>
+<arg>(//div[@class="figcaption"]//h5)[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:52.526100" elapsed="0.045904"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:52.017214" elapsed="0.554790"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:00:52.580119" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:52.884833" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-19.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-19.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:00:52.580119" elapsed="0.304714"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:00:53.725394" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:00:52.885832" elapsed="0.839562"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:52.578120" elapsed="1.147274"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:48.539632" elapsed="5.194198"/>
+</test>
+<test id="s1-t12" name="Caso de teste 12 - teste para escrolar a pagina" line="36">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:00:53.759182" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:53.766960" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\453221ed-7831-4e68-8bdc-41d09348cd61"}</msg>
+<msg time="2025-06-22T00:00:54.243319" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\453221ed-7831-4e68-8bdc-41d09348cd61"}</msg>
+<msg time="2025-06-22T00:00:54.243319" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:00:54.324854" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:00:54.324854" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:00:56.968987" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:00:53.756359" elapsed="3.213630"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:00:56.997440" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:00:56.970988" elapsed="0.027450"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:53.755360" elapsed="3.243078"/>
+</kw>
+<kw name="Escrolar pagina como teste de funcionalidade" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:00:57.010680" level="INFO">Clicks the element '(//li)[26]//a'.</msg>
+<arg>(//li)[26]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:00:57.008682" elapsed="0.376731"/>
+</kw>
+<kw name="Scroll To" owner="Browser">
+<msg time="2025-06-22T00:00:57.414553" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-06-22T00:00:57.415550" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-06-22T00:00:57.433613" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-06-22T00:00:57.433613" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2025-06-22T00:00:57.444112" level="INFO">JavaScript executed successfully.</msg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Scrolls an element or the page to an absolute position based on given coordinates.</doc>
+<status status="PASS" start="2025-06-22T00:00:57.387350" elapsed="0.056762"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-22T00:01:00.446556" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-22T00:00:57.445113" elapsed="3.001443"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:01:00.446556" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:01:00.704935" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-20.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-20.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:01:00.446556" elapsed="0.259378"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:57.007682" elapsed="3.699253"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:01:00.710929" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:01:00.937485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-21.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-21.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:01:00.710929" elapsed="0.227555"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:01:02.199156" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:01:00.938484" elapsed="1.260672"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:01:00.708935" elapsed="1.490221"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:00:53.747666" elapsed="8.451490"/>
+</test>
+<test id="s1-t13" name="Caso de teste 13 - teste para input de numero" line="38">
+<kw name="Abrir o navegador" owner="google_resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-22T00:01:02.227766" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:01:02.234950" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\cda13fb7-fe2e-43e4-ba4b-d3a663550a93"}</msg>
+<msg time="2025-06-22T00:01:02.698823" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\cda13fb7-fe2e-43e4-ba4b-d3a663550a93"}</msg>
+<msg time="2025-06-22T00:01:02.698823" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-22T00:01:02.757274" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-22T00:01:02.758274" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-22T00:01:05.598572" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-22T00:01:02.227766" elapsed="3.370806"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-22T00:01:05.630054" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-22T00:01:05.598572" elapsed="0.032482"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:01:02.227112" elapsed="3.404937"/>
+</kw>
+<kw name="Adicionar numero no input" owner="google_resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-22T00:01:05.638042" level="INFO">Clicks the element '(//li)[27]//a'.</msg>
+<arg>(//li)[27]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:01:05.636045" elapsed="0.396488"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-06-22T00:01:06.035528" level="INFO">Fills the text '10' in the given field.</msg>
+<arg>//input[@type="number"]</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-06-22T00:01:06.033529" elapsed="0.057923"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:01:05.634047" elapsed="0.457405"/>
+</kw>
+<kw name="Fechar o navegador" owner="google_resource" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-22T00:01:06.107078" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:01:06.444608" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-22.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-22.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-22T00:01:06.107078" elapsed="0.337530"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-22T00:01:07.211877" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-22T00:01:06.444608" elapsed="0.767269"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:01:06.091452" elapsed="1.120425"/>
+</kw>
+<status status="PASS" start="2025-06-22T00:01:02.220482" elapsed="5.006881"/>
+</test>
+<doc>Essa suíte testa a pagina de teste the-internet.herokuapp.com</doc>
+<status status="PASS" start="2025-06-21T23:59:09.539493" elapsed="117.719076"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Google Teste" id="s1" pass="13" fail="0" skip="0">Google Teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-21T23:59:10.007668" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:16.233855" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:16.554827" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:17.952678" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:22.029385" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:22.327809" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:23.438267" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:27.329829" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:27.679206" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:27.905329" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:28.095299" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:29.195044" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-21T23:59:38.123274" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:43.329201" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-21T23:59:44.416055" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:01.440263" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:02.759052" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:10.560024" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:19.340475" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:19.539397" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:20.654520" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:25.121108" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:26.219747" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:30.768991" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:31.827769" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:38.094096" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:39.141014" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:46.653216" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:48.549899" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:00:52.580119" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:00:53.759182" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:01:00.446556" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:01:00.710929" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-22T00:01:02.227766" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-22T00:01:06.107078" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+</errors>
+</robot>

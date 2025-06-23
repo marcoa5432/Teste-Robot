@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.11.0 on win32)" generated="2025-06-23T20:08:58.500822" rpa="false" schemaversion="5">
+<suite id="s1" name="JQueryUI teste" source="c:\Users\marco\OneDrive\Área de Trabalho\Atividades\Teste-Robot\JQueryUI-Menu\JQueryUI_teste.robot">
+<test id="s1-t1" name="Caso de teste 01 - Entrar na pagina JqueryUI" line="8">
+<kw name="Abrir o navegador" owner="JQueryUI_resouce" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-06-23T20:08:59.047622" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-23T20:08:59.233439" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\marco\\OneDrive\\\u00c1rea de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\0edde437-f8cb-4010-be0a-21b2ef4ab846"}</msg>
+<msg time="2025-06-23T20:08:59.323608" level="INFO">Starting Browser process C:\Users\marco\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62678</msg>
+<msg time="2025-06-23T20:09:01.992445" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\marco\\OneDrive\\Área de Trabalho\\Atividades\\Teste-Robot\\browser\\traces\\temp\\0edde437-f8cb-4010-be0a-21b2ef4ab846"}</msg>
+<msg time="2025-06-23T20:09:02.008071" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  }
+}</msg>
+<msg time="2025-06-23T20:09:02.082093" level="INFO">Successfully created context. </msg>
+<msg time="2025-06-23T20:09:02.082093" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-06-23T20:09:04.722991" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/</msg>
+<arg>${BROWSER}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-06-23T20:08:59.047622" elapsed="5.675369"/>
+</kw>
+<kw name="Set Viewport Size" owner="Browser">
+<msg time="2025-06-23T20:09:04.770014" level="INFO">Set viewport size to: [object Object]</msg>
+<arg>1364</arg>
+<arg>964</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Sets current Pages viewport size to specified dimensions.</doc>
+<status status="PASS" start="2025-06-23T20:09:04.722991" elapsed="0.048023"/>
+</kw>
+<status status="PASS" start="2025-06-23T20:08:59.031997" elapsed="5.741014"/>
+</kw>
+<kw name="Entrar na pagina JqueryUI clicar nos raidos botoes" owner="JQueryUI_resouce">
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:04.789327" level="INFO">Clicks the element '(//li)[28]//a'.</msg>
+<arg>(//li)[28]//a</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:04.786727" elapsed="0.390996"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:05.179721" level="INFO">Clicks the element '//a[@href="http://api.jqueryui.com/menu/"]'.</msg>
+<arg>//a[@href="http://api.jqueryui.com/menu/"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:05.178722" elapsed="1.314380"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:06.493102" level="INFO">Clicks the element '//a[@href="https://jqueryui.com/themeroller/"]'.</msg>
+<arg>//a[@href="https://jqueryui.com/themeroller/"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:06.493102" elapsed="1.868656"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-06-23T20:09:08.365328" level="INFO">Fills the text 'Marco Aurelio' in the given field.</msg>
+<arg>//input[@class="ui-autocomplete-input"]</arg>
+<arg>Marco Aurelio</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:08.362901" elapsed="0.913316"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-23T20:09:09.307466" level="INFO">Waited for Element with selector //h2[@class="demoHeaders" and text()="Button"] at state visible</msg>
+<arg>//h2[@class="demoHeaders" and text()="Button"]</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.276217" elapsed="0.031249"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:09.323091" level="INFO">Clicks the element '//button[@id="button"]'.</msg>
+<arg>//button[@id="button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.323091" elapsed="0.205235"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:09.528326" level="INFO">Clicks the element '//button[@id="button-icon"]'.</msg>
+<arg>//button[@id="button-icon"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.528326" elapsed="0.154235"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-23T20:09:09.699474" level="INFO">Waited for Element with selector //h2[@class="demoHeaders" and text()="Checkboxradio"] at state visible</msg>
+<arg>//h2[@class="demoHeaders" and text()="Checkboxradio"]</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.683558" elapsed="0.015916"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:09.701470" level="INFO">Clicks the element '(//div[@id="radioset"]//span[@class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"])[1]'.</msg>
+<arg>(//div[@id="radioset"]//span[@class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.700472" elapsed="0.052864"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:09.753336" level="INFO">Clicks the element '(//div[@id="radioset"]//span[@class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"])[2]'.</msg>
+<arg>(//div[@id="radioset"]//span[@class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"])[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.753336" elapsed="0.078903"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:09.834237" level="INFO">Clicks the element '(//div[@id="radioset"]//span[@class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"])[3]'.</msg>
+<arg>(//div[@id="radioset"]//span[@class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"])[3]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.832239" elapsed="0.070307"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-23T20:09:09.920915" level="INFO">Waited for Element with selector //h2[@class="demoHeaders" and text()="Controlgroup"] at state visible</msg>
+<arg>//h2[@class="demoHeaders" and text()="Controlgroup"]</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.902546" elapsed="0.019368"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:09.924912" level="INFO">Clicks the element '(//div[@id="controlgroup"]//span)[1]'.</msg>
+<arg>(//div[@id="controlgroup"]//span)[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:09.922914" elapsed="0.081874"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.004788" level="INFO">Clicks the element '(//div[@id="controlgroup"]//span)[3]'.</msg>
+<arg>(//div[@id="controlgroup"]//span)[3]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.004788" elapsed="0.066453"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.071241" level="INFO">Clicks the element '(//div[@id="controlgroup"]//span)[5]'.</msg>
+<arg>(//div[@id="controlgroup"]//span)[5]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.071241" elapsed="0.101765"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.173006" level="INFO">Clicks the element '//button[@class="ui-widget ui-controlgroup-item ui-button ui-corner-right"]'.</msg>
+<arg>//button[@class="ui-widget ui-controlgroup-item ui-button ui-corner-right"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.173006" elapsed="0.053415"/>
+</kw>
+<status status="PASS" start="2025-06-23T20:09:04.776454" elapsed="5.449967"/>
+</kw>
+<kw name="Conferir as tabs da pagina" owner="JQueryUI_resouce">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-23T20:09:10.249029" level="INFO">Waited for Element with selector //h2[@class="demoHeaders" and text()="Tabs"] at state visible</msg>
+<arg>//h2[@class="demoHeaders" and text()="Tabs"]</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.236043" elapsed="0.014484"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.253525" level="INFO">Clicks the element '(//div[@id="tabs"]//ul//li)[1]'.</msg>
+<arg>(//div[@id="tabs"]//ul//li)[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.251527" elapsed="0.067365"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.321888" level="INFO">Clicks the element '(//div[@id="tabs"]//ul//li)[2]'.</msg>
+<arg>(//div[@id="tabs"]//ul//li)[2]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.319888" elapsed="0.072697"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.394585" level="INFO">Clicks the element '(//div[@id="tabs"]//ul//li)[3]'.</msg>
+<arg>(//div[@id="tabs"]//ul//li)[3]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.393585" elapsed="0.050893"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-23T20:09:10.459919" level="INFO">Waited for Element with selector //h2[@class="demoHeaders" and text()="Dialog"] at state visible</msg>
+<arg>//h2[@class="demoHeaders" and text()="Dialog"]</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.444478" elapsed="0.015441"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.462916" level="INFO">Clicks the element '//button[@id="dialog-link"]'.</msg>
+<arg>//button[@id="dialog-link"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.460915" elapsed="0.079526"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.542441" level="INFO">Clicks the element '//button[@type="button" and text()="Ok"]'.</msg>
+<arg>//button[@type="button" and text()="Ok"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.540441" elapsed="0.049842"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-06-23T20:09:10.606559" level="INFO">Waited for Element with selector //h2[@class="demoHeaders" and text()="Framework Icons (content color preview)"] at state visible</msg>
+<arg>//h2[@class="demoHeaders" and text()="Framework Icons (content color preview)"]</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.590283" elapsed="0.017275"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.608556" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[1]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[1]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.607558" elapsed="0.046055"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.656550" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[3]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[3]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.654614" elapsed="0.049948"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.706833" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[6]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[6]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.705561" elapsed="0.116323"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.823933" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[9]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[9]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.822883" elapsed="0.054906"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.888746" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[12]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[12]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.877789" elapsed="0.057280"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.938106" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[15]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[15]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.936069" elapsed="0.050140"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:10.989505" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[18]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[18]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:10.987205" elapsed="0.050190"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.040750" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[21]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[21]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.038751" elapsed="0.063927"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.107074" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[24]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[24]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.103676" elapsed="0.049790"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.157301" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[27]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[27]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.154463" elapsed="0.050498"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.207594" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[30]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[30]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.206594" elapsed="0.047931"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.256915" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[33]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[33]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.255915" elapsed="0.078228"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.336348" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[39]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[39]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.335142" elapsed="0.045042"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.380184" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[46]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[46]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.380184" elapsed="0.048854"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.429038" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[49]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[49]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.429038" elapsed="0.054794"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.486830" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[53]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[53]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.484831" elapsed="0.056249"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.544078" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[59]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[59]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.542081" elapsed="0.047615"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-06-23T20:09:11.592341" level="INFO">Clicks the element '(//li[@class="ui-state-default ui-corner-all"])[68]'.</msg>
+<arg>(//li[@class="ui-state-default ui-corner-all"])[68]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.591196" elapsed="0.048905"/>
+</kw>
+<status status="PASS" start="2025-06-23T20:09:10.234043" elapsed="1.406058"/>
+</kw>
+<kw name="Fechar o navegador" owner="JQueryUI_resouce" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-06-23T20:09:11.645484" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+<msg time="2025-06-23T20:09:11.871172" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.646354" elapsed="0.224818"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-06-23T20:09:12.784388" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-23T20:09:11.872170" elapsed="0.912218"/>
+</kw>
+<status status="PASS" start="2025-06-23T20:09:11.643687" elapsed="1.140701"/>
+</kw>
+<status status="PASS" start="2025-06-23T20:08:59.031997" elapsed="13.752391"/>
+</test>
+<doc>Essa suíte testa a pagina de teste the-internet.herokuapp.com/JqueryUI</doc>
+<status status="PASS" start="2025-06-23T20:08:58.516446" elapsed="14.290073"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="JQueryUI teste" id="s1" pass="1" fail="0" skip="0">JQueryUI teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-23T20:08:59.047622" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-06-23T20:09:11.645484" level="WARN">Keyword 'Take Screenshot' found both from a custom library 'Browser' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'Browser.Take Screenshot' or 'Screenshot.Take Screenshot'.</msg>
+</errors>
+</robot>
