@@ -98,7 +98,7 @@ Wait For Text
     [Documentation]    Aguarda até que o texto esteja visível.
     [Arguments]    ${text}    ${timeout}=${DEFAULT_TIMEOUT}
     Wait For Elements State    text=${text}    visible    timeout=${t imeout}
-Wait for No text
+wait for invisible text
     [Documentation]    Aguarda até que o texto não esteja mais visível.
     [Arguments]    ${text}    ${timeout}=${DEFAULT_TIMEOUT}
     Wait For Elements State    text=${text}    not visible    timeout=${timeout}
