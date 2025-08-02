@@ -2,22 +2,17 @@
 Library     Browser
 Library     Dialogs
 Library     Screenshot
-#=========================================================================================================================
-*** Variables ***
-${BROWSER}                       https://the-internet.herokuapp.com/
+
+Resource    ../Robot-Teste/GLOBAL_KEYWORDS.robot
+
  #==========================================================================================================================
 *** Keywords ***
-Abrir o navegador
-    Open Browser                 ${BROWSER}                 chromium                   
-    Set Viewport Size            1364                       964                   
-Fechar o navegador 
-    Take Screenshot
-    Close Browser
+ 
 Entrar na pagina JqueryUI clicar nos raidos botoes
-    Click                        (//li)[28]//a 
+    Click Web Element By Text                        (//li)[28]//a 
     Click                        //a[@href="http://api.jqueryui.com/menu/"]
     click                        //a[@href="https://jqueryui.com/themeroller/"]
-    Fill Text                    //input[@class="ui-autocomplete-input"]                      Marco Aurelio
+    Fill Field                    //input[@class="ui-autocomplete-input"]                      Marco Aurelio
     Wait For Elements State      //h2[@class="demoHeaders" and text()="Button"]               visible         timeout=3s
     click                        //button[@id="button"]
     click                        //button[@id="button-icon"]

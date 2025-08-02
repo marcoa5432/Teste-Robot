@@ -2,16 +2,14 @@
 Library     Browser
 Library     Dialogs
 Library     Screenshot
-#=========================================================================================================================
-*** Variables ***
-${BROWSER}              https://the-internet.herokuapp.com/  
-${IMAGEM_DESEJADA}      //img[@src="/img/avatars/Original-Facebook-Geek-Profile-Avatar-6.jpg"]
-${BOTAO_ATUALIZAR}      //a[text()="click here"]
-${MAX_TENTATIVAS}       10
+Resource    ./GLOBAL_KEYWORDS.robot
+Resource    ./TEST_GLOBAL.robot
+Resource    ./JQueryUI_resouce.robot 
+ 
  #==========================================================================================================================
 *** Keywords ***
 Abrir o navegador
-    Open Browser                 ${BROWSER}                 chromium                   
+    Open Browser                 ${BROWSER}              chromium                        
     Set Viewport Size            1364                       964                   
 Fechar o navegador 
     Take Screenshot
@@ -19,11 +17,11 @@ Fechar o navegador
 #===========================================================================================================================
 Acessar a pagina de teste
     Click                        //a[@href="/abtest"]  
-    Take Screenshot 
+    # Take Screenshot 
     Wait For Elements State      //div[@class="example"]//h3 
 #===========================================================================================================================     
 Adicionar e remover elemento         
-    Click                        (//li)[2]//a  
+    Click Element                       (//li)[2]//a  
     Click                        //button[@onclick="addElement()"]
     Take Screenshot
     Click                        //button[@class="added-manually"]
@@ -59,14 +57,14 @@ Confirmar imagem quando visivel
     Log    Imagem encontrada! Teste finalizado com sucesso
 #==========================================================================================================================    
 Adicionar o checkbox e adicionar na label 
-    Click                         (//li)[13]//a 
-    Click                         //input[@label="blah"]
-    Click                         //input[@label="blah"]/../..//button
-    Wait For Elements State       //p[text()="It's gone!"]        visible        timeout= 5s
+    Click Element                         (//li)[13]//a 
+    Click Element                        //input[@label="blah"]
+    Click Element                        //input[@label="blah"]/../..//button
+    Wait For Element Visible       //p[text()="It's gone!"]        visible        timeout= 5s
     Take Screenshot
-    Click                         //input[@type="text"]/..//button
-    Wait For Elements State       //p[text()="It's enabled!"]     visible        timeout= 5s
-    Fill Text                     //input[@type="text"]           ROBOTIZANDO WORLD
+    Click Element                         //input[@type="text"]/..//button
+    Wait For Element Visible       //p[text()="It's enabled!"]     visible        timeout= 5s
+    Fill Field                    //input[@type="text"]           ROBOTIZANDO WORLD
     Sleep                         5s
     Take Screenshot
 #==========================================================================================================================

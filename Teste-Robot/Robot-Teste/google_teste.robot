@@ -1,12 +1,25 @@
 *** Settings ***
 Documentation    Essa suíte testa a pagina de teste the-internet.herokuapp.com
 Resource         ./google_resource.robot 
-Test Setup       Abrir o navegador
-Test Teardown    Fechar o navegador 
+Resource         ./GLOBAL_KEYWORDS.robot
+Resource         ./TEST_GLOBAL.robot
+#==========================================================================================================================
+Library         Browser
+Library         Dialogs
+Library         Screenshot
+Library         Collections
+Library         String
+Library         OperatingSystem
+
+#==========================================================================================================================
+Suite Setup     Open Browser    ${BROWSER}
+Suite Teardown  Close Browser
+Test Timeout    30s
 #==================================================================================================================================================
 *** Test Cases ***
 Caso de teste 01 - Verificar elemento visivel 
     Acessar a pagina de teste
+    # Take Screenshot
 #==================================================================================================================================================     
 Caso de teste 02 - Add/Remove Elements
     Adicionar e remover elemento
